@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbw28fjpa87l5"]
+
+[ext_resource type="PackedScene" uid="uid://cyqfk4jdtqqxh" path="res://Unit.tscn" id="1_s7711"]
+[ext_resource type="Texture2D" uid="uid://cmih5lo7b5vfj" path="res://Sprites/tile_0060.png" id="2_fuxx4"]
+[ext_resource type="Script" path="res://PlayerUnit.gd" id="2_xkaou"]
+
+[node name="Player" instance=ExtResource("1_s7711")]
+script = ExtResource("2_xkaou")
+is_player = true
+
+[node name="SelectionVisual" type="Sprite2D" parent="." index="0"]
+visible = false
+self_modulate = Color(0.0117647, 1, 0.0156863, 1)
+position = Vector2(0, 1)
+texture = ExtResource("2_fuxx4")

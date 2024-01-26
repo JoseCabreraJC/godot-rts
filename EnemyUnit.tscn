@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2ikgmckwsgka"]
+
+[ext_resource type="PackedScene" uid="uid://cyqfk4jdtqqxh" path="res://Unit.tscn" id="1_x31cq"]
+[ext_resource type="Texture2D" uid="uid://n5mxayck4a5c" path="res://Sprites/tile_0123.png" id="2_hxra6"]
+[ext_resource type="Script" path="res://EnemyScript.gd" id="2_m77i6"]
+
+[node name="Enemy" instance=ExtResource("1_x31cq")]
+script = ExtResource("2_m77i6")
+detect_range = 100.0
+move_speed = 25.0
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource("2_hxra6")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0)
